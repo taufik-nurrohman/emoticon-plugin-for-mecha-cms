@@ -1,0 +1,40 @@
+@font-face {
+  font-family:"Simple Emoticons";
+  src:url('../object/icons.woff') format('woff');
+  font-weight:normal;
+  font-style:normal;
+}
+.se-i {
+  font-family:"Simple Emoticons";
+  speak:none;
+  font-style:normal;
+  font-weight:normal;
+  font-variant:normal;
+  text-transform:none;
+  line-height:inherit;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  vertical-align:middle;
+}
+.se-i-music:before {content:"\e600"}
+.se-i-pacman:before {content:"\e601"}
+.se-i-sun:before {content:"\e614"}
+.se-i-star:before {content:"\e610"}
+.se-i-star-alt:before {content:"\e615"}
+.se-i-heart:before {content:"\e60f"}
+.se-i-heart-broken:before {content:"\e612"}
+.se-i-thumbs-up:before {content:"\e611"}
+.se-i-thumbs-down:before {content:"\e613"}
+.se-i-happy:before {content:"\e602"}
+.se-i-smile:before {content:"\e603"}
+.se-i-tongue:before {content:"\e604"}
+.se-i-sad:before {content:"\e605"}
+.se-i-wink:before {content:"\e606"}
+.se-i-grin:before {content:"\e607"}
+.se-i-cool:before {content:"\e608"}
+.se-i-angry:before {content:"\e609"}
+.se-i-evil:before {content:"\e60a"}
+.se-i-shocked:before {content:"\e60b"}
+.se-i-confused:before {content:"\e60c"}
+.se-i-neutral:before {content:"\e60e"}
+.se-i-wondering:before {content:"\e60d"}

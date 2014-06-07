@@ -1,0 +1,14 @@
+Title: Emotikon Sederhana
+Author: Taufik Nurrohman <http://latitudu.com>
+Version: 1.0.0
+
+====
+
+> Emoticon menggunakan fon ikon.
+
+Plugin ini akan secara otomatis mengubah pola-pola _smiley_ (yang juga bisa Anda tentukan sendiri) menjadi ikon emotikon yang lebih memiliki arti. Kredit fon ikon kepada [Icomoon](http://icomoon.io "IcoMoon &ndash; Custom Built and Crisp Icon Fonts").
+
+Mungkin Anda juga akan tertarik dengan beberapa tautan ini:
+
+ * [Wikipedia &ndash; List of Emoticons](http://en.wikipedia.org/wiki/List_of_emoticons "List of Emoticons")
+ * [All Japanese Emoticons](http://japaneseemoticons.net/all-japanese-emoticons "Over 2,500 Japanese Emoticons All on One Page!")

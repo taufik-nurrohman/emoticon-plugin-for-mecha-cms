@@ -1,0 +1,14 @@
+Title: Simple Emoticon
+Author: Taufik Nurrohman <http://latitudu.com>
+Version: 1.0.0
+
+====
+
+> Emoticon using icon fonts.
+
+This plugin will automatically parse the smiley patterns (which you can also set it yourself) into meaningful emoticon icons. Icon font credit to [Icomoon](http://icomoon.io "IcoMoon &ndash; Custom Built and Crisp Icon Fonts").
+
+You may also be interested in some of this link:
+
+ * [Wikipedia &ndash; List of Emoticons](http://en.wikipedia.org/wiki/List_of_emoticons "List of Emoticons")
+ * [All Japanese Emoticons](http://japaneseemoticons.net/all-japanese-emoticons "Over 2,500 Japanese Emoticons All on One Page!")
