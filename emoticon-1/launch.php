@@ -27,7 +27,6 @@ if($config->url_current == $config->url . '/' . $config->manager->slug . '/plugi
   font-size:1.4em;
   vertical-align:middle;
 }
-.table-emoticon-defines tbody td a {display:block}
 .table-emoticon-defines thead .fa-question-circle {cursor:help}
 </style>';
     }, 11);

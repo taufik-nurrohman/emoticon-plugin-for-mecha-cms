@@ -22,8 +22,7 @@
         <tr>
           <td><i class="se-i se-i-<?php echo $icon; ?>"></i></td>
           <td class="text-center">
-            <a href="#move-up" title="<?php echo $speak->plugin_emoticon_title_order_move_up; ?>"><i class="fa fa-angle-up"></i></a>
-            <a href="#move-down" title="<?php echo $speak->plugin_emoticon_title_order_move_down; ?>"><i class="fa fa-angle-down"></i></a>
+            <a href="#move-up" title="<?php echo $speak->plugin_emoticon_title_order_move_up; ?>"><i class="fa fa-angle-up"></i></a><br><a href="#move-down" title="<?php echo $speak->plugin_emoticon_title_order_move_down; ?>"><i class="fa fa-angle-down"></i></a>
           </td>
           <td><input name="defines[<?php echo $icon; ?>]" type="text" class="input-block" value="<?php echo Text::parse($defines)->to_encoded_html; ?>"></td>
         </tr>
