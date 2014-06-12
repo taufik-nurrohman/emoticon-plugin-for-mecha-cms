@@ -3,7 +3,7 @@
   <fieldset>
     <legend><?php echo $speak->plugin_emoticon_title_defines; ?></legend>
     <p><?php echo $speak->plugin_emoticon_description_defines; ?></p>
-    <table class="table-bordered table-full table-emoticon-defines">
+    <table class="table-bordered table-full table-sortable table-emoticon-defines">
       <colgroup>
         <col style="width:8em;">
         <col style="width:2.8em;">
@@ -20,9 +20,9 @@
         <?php $emoticon_config = unserialize(File::open(PLUGIN . DS . 'emoticon-1' . DS . 'states' . DS . 'config.txt')->read()); ?>
         <?php foreach($emoticon_config['defines'] as $icon => $defines): ?>
         <tr>
-          <td><i class="se-i se-i-<?php echo $icon; ?>"></i></td>
-          <td class="text-center">
-            <a href="#move-up" title="<?php echo $speak->plugin_emoticon_title_order_move_up; ?>"><i class="fa fa-angle-up"></i></a><br><a href="#move-down" title="<?php echo $speak->plugin_emoticon_title_order_move_down; ?>"><i class="fa fa-angle-down"></i></a>
+          <td class="align-middle"><i class="se-i se-i-<?php echo $icon; ?>"></i></td>
+          <td class="text-center align-middle">
+            <a class="sort" href="#move-up" title="<?php echo $speak->plugin_emoticon_title_order_move_up; ?>"><i class="fa fa-angle-up"></i></a><a class="sort" href="#move-down" title="<?php echo $speak->plugin_emoticon_title_order_move_down; ?>"><i class="fa fa-angle-down"></i></a>
           </td>
           <td><input name="defines[<?php echo $icon; ?>]" type="text" class="input-block" value="<?php echo Text::parse($defines)->to_encoded_html; ?>"></td>
         </tr>

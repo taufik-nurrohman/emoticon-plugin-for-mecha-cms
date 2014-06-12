@@ -4,7 +4,7 @@ plugin_emoticon_title_scope: Scope
 plugin_emoticon_description_scope: Apply emoticon parser to&hellip;
 
 plugin_emoticon_title_symbol: Symbol
-plugin_emoticon_title_order: <span title="Change the priority of the parsing order."><i class="fa fa-question-circle text-info"></i></span>
+plugin_emoticon_title_order: <i class="fa fa-question-circle text-info help" title="Change the priority of the parsing order."></i>
 plugin_emoticon_title_order_move_up: Move up!
 plugin_emoticon_title_order_move_down: Move down!
 plugin_emoticon_title_smiley: Smiley(s)

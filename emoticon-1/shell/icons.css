@@ -4,6 +4,7 @@
   font-weight:normal;
   font-style:normal;
 }
+
 .se-i {
   font-family:"Simple Emoticons";
   speak:none;
@@ -16,6 +17,7 @@
   -moz-osx-font-smoothing:grayscale;
   vertical-align:middle;
 }
+
 .se-i-music:before {content:"\e600"}
 .se-i-pacman:before {content:"\e601"}
 .se-i-sun:before {content:"\e614"}
@@ -38,3 +40,11 @@
 .se-i-confused:before {content:"\e60c"}
 .se-i-neutral:before {content:"\e60e"}
 .se-i-wondering:before {content:"\e60d"}
+
+
+/**
+ * For Manager Page
+ * ----------------
+ */
+
+.table-emoticon-defines tbody td:first-child {font-size:1.4em}

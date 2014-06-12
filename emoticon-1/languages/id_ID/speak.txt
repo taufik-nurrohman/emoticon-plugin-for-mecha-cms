@@ -4,7 +4,7 @@ plugin_emoticon_title_scope: Cakupan
 plugin_emoticon_description_scope: Terapkan parser emotikon ke&hellip;
 
 plugin_emoticon_title_symbol: Simbol
-plugin_emoticon_title_order: <span title="Ubah prioritas urutan penguraian/parsing emotikon."><i class="fa fa-question-circle text-info"></i></span>
+plugin_emoticon_title_order: <i class="fa fa-question-circle text-info help" title="Ubah prioritas urutan penguraian/parsing emotikon."></i>
 plugin_emoticon_title_order_move_up: Geser ke atas!
 plugin_emoticon_title_order_move_down: Geser ke bawah!
 plugin_emoticon_title_smiley: Smiley

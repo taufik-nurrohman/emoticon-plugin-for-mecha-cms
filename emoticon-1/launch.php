@@ -16,22 +16,6 @@ Weapon::add('shell_after', function() {
     echo Asset::stylesheet('cabinet/plugins/emoticon-1/shell/icons.css');
 }, 11);
 
-// Add the emoticon table row order manager
-if($config->url_current == $config->url . '/' . $config->manager->slug . '/plugin/emoticon-1') {
-    Weapon::add('sword_after', function() {
-        echo Asset::script('cabinet/plugins/emoticon-1/sword/order.js');
-    }, 11);
-    Weapon::add('shell_after', function() {
-        echo '<style>
-.table-emoticon-defines tbody td:first-child {
-  font-size:1.4em;
-  vertical-align:middle;
-}
-.table-emoticon-defines thead .fa-question-circle {cursor:help}
-</style>';
-    }, 11);
-}
-
 // Build the emoticon parser
 function simple_emoticon_parser($content) {
     global $emoticon_config;
