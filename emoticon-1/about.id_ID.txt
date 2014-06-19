@@ -4,7 +4,7 @@ Version: 1.0.1
 
 ====
 
-> Emoticon menggunakan fon ikon.
+> Emotikon menggunakan fon ikon.
 
 Plugin ini akan secara otomatis mengubah pola-pola _smiley_ (yang juga bisa Anda tentukan sendiri) menjadi ikon emotikon yang lebih memiliki arti. Kredit fon ikon kepada [Icomoon](http://icomoon.io "IcoMoon &ndash; Custom Built and Crisp Icon Fonts").
 
