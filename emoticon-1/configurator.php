@@ -1,5 +1,5 @@
 <form class="form-plugin" action="<?php echo $config->url_current; ?>/update" method="post">
-  <input name="token" type="hidden" value="<?php echo Guardian::makeToken(); ?>">
+  <input name="token" type="hidden" value="<?php echo $token; ?>">
   <fieldset>
     <legend><?php echo $speak->plugin_emoticon_title_defines; ?></legend>
     <p><?php echo $speak->plugin_emoticon_description_defines; ?></p>
@@ -17,7 +17,7 @@
         </tr>
       </thead>
       <tbody>
-        <?php $emoticon_config = unserialize(File::open(PLUGIN . DS . 'emoticon-1' . DS . 'states' . DS . 'config.txt')->read()); ?>
+        <?php $emoticon_config = File::open(PLUGIN . DS . 'emoticon-1' . DS . 'states' . DS . 'config.txt')->unserialize(); ?>
         <?php foreach($emoticon_config['defines'] as $icon => $defines): ?>
         <tr>
           <td class="align-middle"><i class="se-i se-i-<?php echo $icon; ?>"></i></td>
@@ -31,7 +31,7 @@
     </table>
   </fieldset>
   <fieldset>
-    <legend><?php echo $speak->plugin_emoticon_title_scope; ?></legend>
+    <legend><?php echo $speak->scope; ?></legend>
     <p><?php echo $speak->plugin_emoticon_description_scope; ?></p>
     <div class="p">
       <?php

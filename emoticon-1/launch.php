@@ -3,14 +3,6 @@
 // Load the configuration file
 $emoticon_config = unserialize(File::open(PLUGIN . DS . 'emoticon-1' . DS . 'states' . DS . 'config.txt')->read());
 
-// Specify the language file path
-if( ! $language = File::exist(PLUGIN . DS . 'emoticon-1' . DS . 'languages' . DS . $config->language . DS . 'speak.txt')) {
-    $language = PLUGIN . DS . 'emoticon-1' . DS . 'languages' . DS . 'en_US' . DS . 'speak.txt';
-}
-
-// Merge the plugin language items to `Config::speak()`
-Config::merge('speak', Text::toArray(File::open($language)->read()));
-
 // Add the emoticon stylesheet
 Weapon::add('shell_after', function() {
     echo Asset::stylesheet('cabinet/plugins/emoticon-1/shell/icons.css');
