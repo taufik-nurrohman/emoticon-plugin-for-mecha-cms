@@ -52,6 +52,6 @@
     </div>
   </fieldset>
   <p>
-    <button class="btn btn-primary btn-update" type="submit"><i class="fa fa-check-circle"></i> <?php echo $speak->update; ?></button>
+    <button class="btn btn-action" type="submit"><i class="fa fa-check-circle"></i> <?php echo $speak->update; ?></button>
   </p>
 </form>

@@ -40,7 +40,7 @@ Route::accept($config->manager->slug . '/plugin/emoticon-1/update', function() u
     if($request = Request::post()) {
         Guardian::checkToken($request['token']);
         unset($request['token']); // Remove token from request array
-        File::write(serialize($request))->saveTo(PLUGIN . DS . 'emoticon-1' . DS . 'states' . DS . 'config.txt');
+        File::serialize($request)->saveTo(PLUGIN . DS . 'emoticon-1' . DS . 'states' . DS . 'config.txt');
         Notify::success(Config::speak('notify_success_updated', array($speak->plugin)));
         Guardian::kick(dirname($config->url_current));
     }
