@@ -1,14 +1,14 @@
 <?php
 
-// Load the configuration file
-$emoticon_config = unserialize(File::open(PLUGIN . DS . 'emoticon-1' . DS . 'states' . DS . 'config.txt')->read());
+// Load the configuration data
+$emoticon_config = File::open(PLUGIN . DS . basename(__DIR__) . DS . 'states' . DS . 'config.txt')->unserialize();
 
-// Add the emoticon stylesheet
+// Add the stylesheet
 Weapon::add('shell_after', function() {
-    echo Asset::stylesheet('cabinet/plugins/emoticon-1/shell/icons.css');
+    echo Asset::stylesheet('cabinet/plugins/' . basename(__DIR__) . '/shell/icons.css');
 }, 11);
 
-// Build the emoticon parser
+// Build the parser
 function simple_emoticon_parser($content) {
     global $emoticon_config;
     foreach($emoticon_config['defines'] as $icon => $patterns) {
@@ -33,14 +33,14 @@ if(isset($emoticon_config['scopes']) && is_array($emoticon_config['scopes'])) {
  * --------------
  */
 
-Route::accept($config->manager->slug . '/plugin/emoticon-1/update', function() use($config, $speak) {
+Route::accept($config->manager->slug . '/plugin/' . basename(__DIR__) . '/update', function() use($config, $speak) {
     if( ! Guardian::happy()) {
         Shield::abort();
     }
     if($request = Request::post()) {
         Guardian::checkToken($request['token']);
         unset($request['token']); // Remove token from request array
-        File::serialize($request)->saveTo(PLUGIN . DS . 'emoticon-1' . DS . 'states' . DS . 'config.txt');
+        File::serialize($request)->saveTo(PLUGIN . DS . basename(__DIR__) . DS . 'states' . DS . 'config.txt');
         Notify::success(Config::speak('notify_success_updated', array($speak->plugin)));
         Guardian::kick(dirname($config->url_current));
     }

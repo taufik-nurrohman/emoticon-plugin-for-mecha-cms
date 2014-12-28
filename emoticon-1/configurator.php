@@ -17,7 +17,7 @@
         </tr>
       </thead>
       <tbody>
-        <?php $emoticon_config = File::open(PLUGIN . DS . 'emoticon-1' . DS . 'states' . DS . 'config.txt')->unserialize(); ?>
+        <?php $emoticon_config = File::open(PLUGIN . DS . basename(__DIR__) . DS . 'states' . DS . 'config.txt')->unserialize(); ?>
         <?php foreach($emoticon_config['defines'] as $icon => $defines): ?>
         <tr>
           <td class="align-middle"><i class="se-i se-i-<?php echo $icon; ?>"></i></td>
