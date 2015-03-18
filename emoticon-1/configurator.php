@@ -3,16 +3,11 @@
   <fieldset>
     <legend><?php echo $speak->plugin_emoticon_title_defines; ?></legend>
     <p><?php echo $speak->plugin_emoticon_description_defines; ?></p>
-    <table class="table-bordered table-full table-sortable table-emoticon-defines">
-      <colgroup>
-        <col style="width:8em;">
-        <col style="width:2.8em;">
-        <col>
-      </colgroup>
+    <table class="table-bordered table-full-width table-sortable table-emoticon-defines">
       <thead>
         <tr>
-          <th><?php echo $speak->plugin_emoticon_title_symbol; ?></th>
-          <th class="text-center"><?php echo $speak->plugin_emoticon_title_order; ?></th>
+          <th><?php echo $speak->plugin_emoticon_title_icon; ?></th>
+          <th class="th-icon"><?php echo $speak->plugin_emoticon_title_order; ?></th>
           <th><?php echo $speak->plugin_emoticon_title_smiley; ?></th>
         </tr>
       </thead>
@@ -20,18 +15,16 @@
         <?php $emoticon_config = File::open(PLUGIN . DS . basename(__DIR__) . DS . 'states' . DS . 'config.txt')->unserialize(); ?>
         <?php foreach($emoticon_config['defines'] as $icon => $defines): ?>
         <tr>
-          <td class="align-middle"><i class="se-i se-i-<?php echo $icon; ?>"></i></td>
-          <td class="text-center align-middle">
-            <a class="sort" href="#move-up" title="<?php echo $speak->plugin_emoticon_title_order_move_up; ?>"><i class="fa fa-angle-up"></i></a><a class="sort" href="#move-down" title="<?php echo $speak->plugin_emoticon_title_order_move_down; ?>"><i class="fa fa-angle-down"></i></a>
-          </td>
-          <td><input name="defines[<?php echo $icon; ?>]" type="text" class="input-block" value="<?php echo Text::parse($defines)->to_encoded_html; ?>"></td>
+          <td class="td-icon"><span class="se"><?php echo '&#x' . $icon . ';'; ?></span></td>
+          <td class="handle"></td>
+          <td><input name="defines[<?php echo $icon; ?>]" type="text" class="input-block" value="<?php echo Text::parse($defines, '->encoded_html'); ?>"></td>
         </tr>
         <?php endforeach; ?>
       </tbody>
     </table>
   </fieldset>
   <fieldset>
-    <legend><?php echo $speak->scope; ?></legend>
+    <legend><?php echo $speak->plugin_emoticon_title_scope; ?></legend>
     <p><?php echo $speak->plugin_emoticon_description_scope; ?></p>
     <div class="p">
       <?php

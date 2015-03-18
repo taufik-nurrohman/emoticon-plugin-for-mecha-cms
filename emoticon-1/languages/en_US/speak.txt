@@ -1,13 +1,11 @@
 plugin_emoticon_title_defines: Defines
 plugin_emoticon_description_defines: Define your smiley patterns on the right side to express the icon on the left side. Separate each smiley with a space.
-plugin_emoticon_title_scope: Scope
+plugin_emoticon_title_scope: Parser Scope
 plugin_emoticon_description_scope: Apply emoticon parser to&hellip;
 
-plugin_emoticon_title_symbol: Symbol
+plugin_emoticon_title_icon: Icon
 plugin_emoticon_title_order: <i class="fa fa-question-circle text-info help" title="Change the priority of the parsing order."></i>
-plugin_emoticon_title_order_move_up: Move up!
-plugin_emoticon_title_order_move_down: Move down!
-plugin_emoticon_title_smiley: Smiley(s)
+plugin_emoticon_title_smiley: Smiley
 
 plugin_emoticon_title_article_title: Article Title
 plugin_emoticon_title_page_title: Page Title
