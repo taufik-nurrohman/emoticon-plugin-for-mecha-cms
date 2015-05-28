@@ -1,5 +1,5 @@
 <form class="form-plugin" action="<?php echo $config->url_current; ?>/update" method="post">
-  <input name="token" type="hidden" value="<?php echo $token; ?>">
+  <?php echo Form::hidden('token', $token); ?>
   <fieldset>
     <legend><?php echo $speak->plugin_emoticon_title_defines; ?></legend>
     <p><?php echo $speak->plugin_emoticon_description_defines; ?></p>
@@ -14,10 +14,10 @@
       <tbody>
         <?php $emoticon_config = File::open(PLUGIN . DS . basename(__DIR__) . DS . 'states' . DS . 'config.txt')->unserialize(); ?>
         <?php foreach($emoticon_config['defines'] as $icon => $defines): ?>
-        <tr>
+        <tr draggable>
           <td class="td-icon"><span class="se"><?php echo '&#x' . $icon . ';'; ?></span></td>
           <td class="handle"></td>
-          <td><input name="defines[<?php echo $icon; ?>]" type="text" class="input-block" value="<?php echo Text::parse($defines, '->encoded_html'); ?>"></td>
+          <td><?php echo Form::text('defines[' . $icon . ']', $defines, null, array('class' => 'input-block')); ?></td>
         </tr>
         <?php endforeach; ?>
       </tbody>
@@ -40,11 +40,9 @@
 
       ?>
       <?php foreach($scope_fields as $filter => $scope): ?>
-      <div><label><input name="scopes[]" value="<?php echo $filter; ?>" type="checkbox"<?php echo in_array($filter, $scopes) ? ' checked' : ""; ?>> <span><?php echo $scope; ?></span></label></div>
+      <div><?php echo Form::checkbox('scopes[]', $filter, in_array($filter, $scopes), $scope); ?></div>
       <?php endforeach; ?>
     </div>
   </fieldset>
-  <p>
-    <button class="btn btn-action" type="submit"><i class="fa fa-check-circle"></i> <?php echo $speak->update; ?></button>
-  </p>
+  <p><?php echo Jot::button('action', $speak->update); ?></p>
 </form>
