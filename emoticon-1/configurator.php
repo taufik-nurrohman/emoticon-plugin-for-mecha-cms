@@ -14,7 +14,7 @@
       <tbody>
         <?php $emoticon_config = File::open(PLUGIN . DS . basename(__DIR__) . DS . 'states' . DS . 'config.txt')->unserialize(); ?>
         <?php foreach($emoticon_config['defines'] as $icon => $defines): ?>
-        <tr draggable>
+        <tr draggable="true">
           <td class="td-icon"><span class="se"><?php echo '&#x' . $icon . ';'; ?></span></td>
           <td class="handle"></td>
           <td><?php echo Form::text('defines[' . $icon . ']', $defines, null, array('class' => 'input-block')); ?></td>
