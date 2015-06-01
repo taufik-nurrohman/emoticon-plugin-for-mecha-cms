@@ -6,9 +6,6 @@ $emoticon_config = File::open(PLUGIN . DS . basename(__DIR__) . DS . 'states' . 
 // Add the emoticon stylesheet
 Weapon::add('shell_after', function() {
     echo Asset::stylesheet('cabinet/plugins/' . basename(__DIR__) . '/shell/icons.css');
-    if(Config::get('page_type') === 'manager') {
-        echo O_BEGIN . '<style>.table-emoticon-defines .se {font-size:1.4em}</style>' . O_END;
-    }
 }, 11);
 
 // Build the emoticon parser
@@ -34,22 +31,3 @@ if(isset($emoticon_config['scopes']) && is_array($emoticon_config['scopes'])) {
         Filter::add($scope, 'simple_emoticon_parser');
     }
 }
-
-
-/**
- * Plugin Updater
- * --------------
- */
-
-Route::accept($config->manager->slug . '/plugin/' . basename(__DIR__) . '/update', function() use($config, $speak) {
-    if( ! Guardian::happy()) {
-        Shield::abort();
-    }
-    if($request = Request::post()) {
-        Guardian::checkToken($request['token']);
-        unset($request['token']); // Remove token from request array
-        File::serialize($request)->saveTo(PLUGIN . DS . basename(__DIR__) . DS . 'states' . DS . 'config.txt', 0600);
-        Notify::success(Config::speak('notify_success_updated', $speak->plugin));
-        Guardian::kick(dirname($config->url_current));
-    }
-});
