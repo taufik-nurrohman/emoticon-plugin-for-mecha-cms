@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <?php $emoticon_config = File::open(PLUGIN . DS . basename(__DIR__) . DS . 'states' . DS . 'config.txt')->unserialize(); ?>
+        <?php $emoticon_config = File::open(PLUGIN . DS . File::B(__DIR__) . DS . 'states' . DS . 'config.txt')->unserialize(); ?>
         <?php foreach($emoticon_config['defines'] as $icon => $defines): ?>
         <tr draggable="true">
           <td class="td-icon"><span class="se"><?php echo '&#x' . $icon . ';'; ?></span></td>
