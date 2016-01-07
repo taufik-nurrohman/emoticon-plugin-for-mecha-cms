@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <?php $emoticon_config = File::open(PLUGIN . DS . File::B(__DIR__) . DS . 'states' . DS . 'config.txt')->unserialize(); ?>
+        <?php $emoticon_config = File::open(__DIR__ . DS . 'states' . DS . 'config.txt')->unserialize(); ?>
         <?php foreach($emoticon_config['defines'] as $icon => $defines): ?>
         <tr draggable="true">
           <td class="td-icon"><span class="se"><?php echo '&#x' . $icon . ';'; ?></span></td>
@@ -40,7 +40,7 @@
 
       ?>
       <?php foreach($scope_fields as $filter => $scope): ?>
-      <div><?php echo Form::checkbox('scopes[]', $filter, in_array($filter, $scopes), $scope); ?></div>
+      <div><?php echo Form::checkbox('scopes[]', $filter, Mecha::walk($scopes)->has($filter), $scope); ?></div>
       <?php endforeach; ?>
     </div>
   </fieldset>

@@ -1,11 +1,11 @@
 <?php
 
 // Load the configuration data
-$emoticon_config = File::open(PLUGIN . DS . File::B(__DIR__) . DS . 'states' . DS . 'config.txt')->unserialize();
+$emoticon_config = File::open(__DIR__ . DS . 'states' . DS . 'config.txt')->unserialize();
 
 // Add the emoticon stylesheet
 Weapon::add('shell_after', function() {
-    echo Asset::stylesheet('cabinet/plugins/' . File::B(__DIR__) . '/assets/shell/icons.css');
+    echo Asset::stylesheet(__DIR__ . DS . 'assets' . DS . 'shell' . DS . 'icons.css');
 }, 11);
 
 // Build the emoticon parser
@@ -21,13 +21,11 @@ function simple_emoticon_parser($content) {
 }
 
 // Remove broken emoticons in recent comment summary
-Filter::add('widget:recent.comment', function($content) {
+Filter::add('widget:recent.response', function($content) {
     return preg_replace('#&\#x[a-f0-9]+;#', ' ', $content);
 });
 
 // Register the filters
 if(isset($emoticon_config['scopes']) && is_array($emoticon_config['scopes'])) {
-    foreach($emoticon_config['scopes'] as $scope) {
-        Filter::add($scope, 'simple_emoticon_parser');
-    }
+    Filter::add($emoticon_config['scopes'], 'simple_emoticon_parser');
 }
