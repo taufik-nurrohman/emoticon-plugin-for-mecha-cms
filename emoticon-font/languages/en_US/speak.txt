@@ -1,0 +1,19 @@
+plugin_emoticon:
+  title:
+    defines: Defines
+    scope: Parser Scope
+    icon: Icon
+    smiley: Smiley
+    article:
+      title: Article Title
+      content: Article Content
+    page:
+      title: Page Title
+      content: Page Content
+    comment:
+      title: Comment Name
+      content: Comment Message
+  description:
+    defines: Define your smiley patterns on the right side to express the icon on the left side. Separate each smiley with a space.
+    scope: Apply emoticon parser to…
+    order: Change the priority of the parsing order.

@@ -1,0 +1,19 @@
+plugin_emoticon:
+  title:
+    defines: Definisi
+    scope: Cakupan Parser
+    icon: Ikon
+    smiley: Smiley
+    article:
+      title: Judul Artikel
+      content: Konten Artikel
+    page:
+      title: Judul Halaman
+      content: Konten Halaman
+    comment:
+      title: Nama Komentator
+      content: Pesan Komentar
+  description:
+    defines: Definisikan pola <em>smiley</em> pada sisi kanan untuk mengekspresikan ikon di sebelah kiri. Pisahkan setiap <em>smiley</em> dengan spasi.
+    scope: Terapkan parser emotikon ke…
+    order: Ubah prioritas urutan penguraian/parsing emotikon.
